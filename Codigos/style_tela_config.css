@@ -63,3 +63,13 @@
     background-color: transparent;
 }
 
+#imagem_perfil{
+    background-color: transparent;
+}
+
+#imagem_perfil:hover{
+    background-color: rgb(238, 236, 236);
+}
+
+
+

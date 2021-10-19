@@ -13,5 +13,9 @@ function define_atributos_config(){
     telefone_usuario.textContent = telefone;
 }
 
+function on_click_img_perfil(){
+    console.log("Pablo");
+}
+
 define_atributos_config();
 
