@@ -14,7 +14,11 @@ function define_atributos_config(){
 }
 
 function on_click_img_perfil(){
-    console.log("Pablo");
+    
+    var caixa_dialogo = confirm("Você deseja alterar sua foto de perfil? ");
+
+    
+
 }
 
 define_atributos_config();
