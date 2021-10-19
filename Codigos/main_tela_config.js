@@ -12,12 +12,9 @@ function define_atributos_config(){
     var telefone = "31982378197";
     telefone_usuario.textContent = telefone;
 }
-
 function on_click_img_perfil(){
     
     var caixa_dialogo = confirm("Você deseja alterar sua foto de perfil? ");
-
-    
 
 }
 
