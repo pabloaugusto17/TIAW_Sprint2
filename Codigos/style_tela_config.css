@@ -26,3 +26,18 @@
     color: white;
     background-color: transparent;
 }
+
+.descricao_usuario{
+    background-color: #a8b6f5;
+    border-radius: 10px;
+}
+
+.descricao_usuario p{
+    margin-top: 10px;
+    color: black;
+    background-color: transparent  ;
+}
+
+.descricao_usuario label{
+    background-color: transparent;
+}
