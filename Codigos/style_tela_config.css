@@ -57,6 +57,7 @@
     margin-top: 10px;
     color: black;
     background-color: transparent  ;
+    
 }
 
 .descricao_usuario label{
@@ -82,6 +83,14 @@
 .icon_editar:hover{
     background-color: rgb(238, 236, 236);
 }
+
+.main_aside img{
+    float: right;
+    margin-top: 10px;
+    width: 40%;
+    height: 50%;
+}
+
 
 
 
