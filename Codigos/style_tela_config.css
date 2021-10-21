@@ -55,10 +55,11 @@
 
 .descricao_usuario p{
     font-family: 'Roboto', Times, serif;
-    font-size: 20px;
+    font-size: 100%;
     margin-top: 10px;
     color: black;
     background-color: transparent  ;
+    min-height: 5%;
 }
 
 .descricao_usuario label{
@@ -100,19 +101,31 @@
     background-color: #999EF5;
 }
 
-.button_aside:hover{
+#button_teste:hover{
     background-color: #999EF5;
 }
 
-.button_aside{
-    min-width: 150px;
-    font-family: 'Roboto', Times, serif;
-    border-radius: 10px;
+#button_teste{
+
+    min-width: 100%;
     color: white;
-    background-color: #4146A6;
+    border-radius: 10px;
+    box-shadow: none;
     margin-top: 15px;
+    background-color: #4146A6;
+    font-size: 15px;
+    
 }
 
+#icon_menu_principal{
+    
+    display: block;
+    margin: auto;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
 
 
 
