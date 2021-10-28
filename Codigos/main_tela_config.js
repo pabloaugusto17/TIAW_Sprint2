@@ -1,35 +1,49 @@
-function define_atributos_config(){
+/** Feito por Pablo Magalhães
+ *  TIAW - Sprint 2
+ *  Funcionalidade: Editar perfil
+ */
 
-    var nome_config = "Pablo";
-    nome_usuario.textContent = nome_config;
-
-    var data_nascimento_usuario = "17/05/2003";
-    data_nascimento.textContent = data_nascimento_usuario;
-
-    var email = "pabloaugustocm@gmail.com";
-    email_usuario.textContent = email;
-
-    var telefone = "31982378197";
-    telefone_usuario.textContent = telefone;
-}
+/*
 function on_click_img_perfil(){
     
     var caixa_dialogo = confirm("Você deseja alterar sua foto de perfil? ");
 
 }
+*/
+
+//Funciolanidade não acabada
+
+function define_atributos_config(){
+
+    //Aqui é definido todas as informações do usuário previmanete para que os 'labels' no html já sejam configurados
+    //Os dados são obtidos através do local storage já registrado anterioremente
+
+    nome_usuario.textContent = localStorage.getItem('username');
+    data_nascimento.textContent = localStorage.getItem('date');
+    email_usuario.textContent = localStorage.getItem('email');
+    telefone_usuario.textContent = localStorage.getItem('number');
+
+}
 function on_click_editar_nome(){
 
+    //É informado um novo nome através do prompt
     var nome_novo = prompt("Informe um novo nome: ");
 
+    //É apenas feita um tratamento caso não seja digitado nada
     if(nome_novo == null || nome_novo == ""){
         alert("Nome não válido");
     }else{
-        nome_usuario.textContent = nome_novo;
+        //Caso esteja certo o novo valor é adicionado ao local storage e o nome é mudado no label
+        localStorage.setItem('username', nome_novo);
+        nome_usuario.textContent = localStorage.getItem('username');
+        
     }
 
 }
 function on_click_editar_data(){
 
+
+    //Em todos os do-while é feito o tratamento até que o dia/mês/ano sejam informados dentro do limite de cada
     do{
 
         var dia_novo = prompt("Informe o dia: ");
@@ -62,33 +76,50 @@ function on_click_editar_data(){
 
     }while(ano_novo < 0);
 
+    //Depois de todos dados serem informados corretamente é feito a inserção do novo valor ao banco de dados junto à mudança no 'label'
     var data_nascimento_nova = dia_novo + "/" + mes_novo + "/" + ano_novo;
 
-    data_nascimento.textContent = data_nascimento_nova;
+    localStorage.setItem('date', data_nascimento_nova);
+    data_nascimento.textContent = localStorage.getItem('date');
 
 }
 function on_click_editar_email(){
 
+
+    //Funciona da mesma forma que o nome
     var email_novo = prompt("Informe o email novo: ");
 
     if(email_novo == "" || email_novo == null || !email_novo.includes("@")){
         alert("Email inválido");
     }else{
-        email_usuario.textContent = email_novo;
+
+        localStorage.setItem('email' , email_novo);
+        email_usuario.textContent = localStorage.getItem('email');
     }
-
-
 }
 function on_click_editar_telefone(){
     
+    //Funciona da mesma forma que o nome e email
     var novo_telefone = prompt("Informe seu novo telefone: ");
 
     if(novo_telefone.length < 8){
         alert("Número inválido");
     }else{
-        telefone_usuario.textContent = novo_telefone;
+        localStorage.setItem('number' , novo_telefone);
+        telefone_usuario.textContent = localStorage.getItem('number');
     }
 }
 
-define_atributos_config();
+//Aqui é criado o usuário para que seja usado em outras funcionalidades e provavelmente será enviado para outros lugares com a função...
+//...JSON.stringify
 
+let usuario = {
+    "id": 1,
+    "nome": localStorage.getItem('username'),
+    "data": localStorage.getItem('date'),
+    "email": localStorage.getItem('email'),
+    "telefone": localStorage.getItem('number'),
+}
+
+//Chama a função para definir os atributos iniciais 
+define_atributos_config();  
