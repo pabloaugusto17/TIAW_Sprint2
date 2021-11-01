@@ -1,6 +1,6 @@
 /** Feito por Pablo Magalhães
  *  TIAW - Sprint 2
- *  Funcionalidade: Editar perfil
+ *  Funcionalidade: Customização perfil
  */
 
 /*
@@ -11,7 +11,7 @@ function on_click_img_perfil(){
 }
 */
 
-//Funciolanidade não acabada
+//Funciolanidade para o sprint 3
 
 function define_atributos_config(){
 
@@ -112,6 +112,18 @@ function on_click_editar_telefone(){
 
 //Aqui é criado o usuário para que seja usado em outras funcionalidades e provavelmente será enviado para outros lugares com a função...
 //...JSON.stringify
+
+//Esses dados já foram inseridos anteriormente, porém em uma situação real, ele seria obtido através da página de login, após...
+//O usuário logar no site
+
+/** Usado para definir o exemplo no site
+ * 
+ * localStorage.setItem('username', "Levi")
+ * localStorage.setItem('date', "25/12/1991")
+ * localStorage.setItem('email', "levi_ack@gmail.com")
+ * localStorage.setItem('number', "123456789")
+ */
+
 
 let usuario = {
     "id": 1,
